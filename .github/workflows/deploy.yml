@@ -35,5 +35,5 @@ jobs:
      
       - name : S3기존 파일 전체 삭제
         run : |
-          aws s3 rm --recursive s3://face-web-page
+          aws s3 rm --recursive s3://instagram-web
           
