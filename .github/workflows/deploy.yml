@@ -34,6 +34,7 @@ jobs:
           aws-secret-access-key : ${{ secrets.AWS_SECRET_ACCESS_KEY }}
      
       - name : S3기존 파일 전체 삭제
-        run : |
-          aws s3 rm --recursive s3://instagram-web
-          
+        run : aws s3 rm --recursive s3://instagram-web
+
+      - name : S3 빌드 파일 업로드
+        run : aws s3 cp ./dist s3://instagram-web/ --recursive
