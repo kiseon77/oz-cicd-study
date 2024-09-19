@@ -40,4 +40,4 @@ jobs:
         run : aws s3 cp ./dist s3://instagram-web/ --recursive
 
       - name : Cloudfront 캐시 무효화
-        run : aws cloudfront create-invalidation --distribution-id E1NXWM45UIW090 --path
+        run : aws cloudfront create-invalidation --distribution-id E1NXWM45UIW090 --paths "/*"
