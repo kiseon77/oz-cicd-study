@@ -16,5 +16,10 @@ jobs :
       - name : 여러 명령어 문장 작성하기
         run : |
           echo "Good"
-          echo "Mornig"
+          echo "Mornig"Í
           pwd
+
+      - name : Github Actions 자체 저장 되어있는 변수 사용해보기
+        run : |
+          echo $GITHUB_REPOSITIORY
+          echo $GITHUB_SHA
